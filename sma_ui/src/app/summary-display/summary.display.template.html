@@ -1,0 +1,21 @@
+<div class="video-parent">
+    <div class="video-container">
+        <div class="video-player">
+            <video #videoPlayer id="video-content" src="assets/videos/sample.mp4" controls></video>
+            <div id="action-modal">
+                <button mat-raised-button color="primary" (click)="showActionItems()">View Action Items</button>
+            </div>
+        </div>
+        <div class="video-summary">
+            <mat-tab-group>
+                <mat-tab label="Text">
+                    Transcription
+                </mat-tab>
+                <mat-tab label="EN">
+                    <div #enSummary></div>
+                </mat-tab>
+                <mat-tab label="ESP">En Vivo</mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>

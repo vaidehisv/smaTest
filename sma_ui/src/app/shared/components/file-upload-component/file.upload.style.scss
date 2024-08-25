@@ -1,0 +1,74 @@
+$common-color: var(--common-color);
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    grid-template: 1fr / 1fr;
+}
+
+.curtain-panel {
+    background-color: $common-color;
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: #fcfcfc;
+    z-index: 2;
+    grid-row: 1;
+    grid-column: 1;
+    transition: all 300ms ease-out;
+    cursor: pointer;
+}
+
+.curtain-panel-up {
+    transform: scaleY(11%);
+    transform-origin: top;
+    color: transparent;
+}
+
+.banner {
+    font-size: 2em;
+    font-family: sans-serif;
+}
+
+.curtain-panel-down {
+    transform: scaleY(100%);
+    transform-origin: top;
+}
+
+.upload-content {
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1;
+    position: relative;
+    border: 1px solid $common-color;
+    border-radius: 7px;
+}
+
+.div-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-file-upload {
+    border: 1px solid $common-color;
+    font-size: 1rem;
+    display: inline-block;
+    padding: 6px 12px;
+    color: $common-color;
+
+    input[type=file] {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,24 @@
+<div *ngIf="!isFileUploaded" [ngStyle]="{'--common-color': styleColor}" class="wrapper">
+    <div hover-class [onLeave]="'curtain-panel-down'" [onEnter]="'curtain-panel-up'" class="curtain-panel">
+        <div class="div-center">
+            <div class="banner">
+                <span>{{bannerMsg}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="upload-content">
+        <div class="div-center">
+            <div class="custom-file-upload">
+                <input #fileUpload type="file" (change)="onFileSelected($event)" />
+                <button mat-raised-button color="styleColor" class="upload-btn" (click)="fileUpload.click()">
+                    Upload {{fileLabel}}
+                </button>
+                <br />
+                <div style="margin: 11px 0px;">
+                    <p>{{filename || "No file selected"}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

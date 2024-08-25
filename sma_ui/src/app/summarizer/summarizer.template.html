@@ -1,0 +1,28 @@
+<div class="app-parent">
+    <div class="app-container">
+        <div class="div-center">
+            <div class="banner-text">
+                <h1>Text Summarization</h1>
+            </div>
+            
+            <div class="file-input">
+                <div class="input-box">
+                    <app-file-uploader [banner-msg]="'Is VTT?'" [style-color]="'orange'"
+                     [label]="'Transcript'" (onFileUpload)="onFileUpload($event, 'Transcript')"></app-file-uploader>
+                </div>
+                <div class="input-box">
+                    <app-file-uploader [banner-msg]="'Is Video?'" [style-color]="'#8cb1f3'" 
+                    [label]="'Video'" (onFileUpload)="onFileUpload($event, 'Video')"></app-file-uploader>
+                </div>
+                <div class="input-box">
+                    <app-file-uploader [banner-msg]="'Is Audio?'" [style-color]="'#df97a3'" 
+                    [label]="'Audio'" (onFileUpload)="onFileUpload($event, 'Audio')"></app-file-uploader>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div *ngIf="isVisible" [@visibleHidden]="isVisible ? 'visible' : 'hidden'">
+    This is the toggling Notification
+</div> -->

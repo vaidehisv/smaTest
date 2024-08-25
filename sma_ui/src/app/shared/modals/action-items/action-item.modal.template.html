@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Action Items</h2>
+<mat-dialog-content class="mat-typography">
+    <ul>
+        <li *ngFor="let item of data.actionItems">
+            {{item}}
+        </li>
+    </ul>
+</mat-dialog-content>
+<h2 mat-dialog-title>Suggested Agenda</h2>
+<mat-dialog-content class="mat-typography">
+    <p>{{data.agenda}}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="true">Ok</button>
+</mat-dialog-actions>
